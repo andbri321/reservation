@@ -27,7 +27,6 @@ class ReservationRoomsController < ApplicationController
     room_params[:room_id] = Room.find_by(name:room_params[:room_id])&.id
     @reservation_room = ReservationRoom.new(room_params)
 
-    byebug
 
     respond_to do |format|
       if @reservation_room.save

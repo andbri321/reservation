@@ -1,0 +1,37 @@
+<%= form_with(model: maintenance) do |form| %>
+  <% if maintenance.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(maintenance.errors.count, "error") %> prohibited this maintenance from being saved:</h2>
+
+      <ul>
+        <% maintenance.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div>
+    <%= form.label :time, style: "display: block" %>
+    <%= form.date_field :time %>
+  </div>
+
+  <div>
+    <%= form.label :user_id, style: "display: block" %>
+    <input name='maintenance[user_id]' value="<%= maintenance&.user&.name %>" />
+  </div>
+
+  <div>
+    <%= form.label :room_id, style: "display: block" %>
+    <input name='maintenance[room_id]' value="<%= maintenance&.room&.name %>" />
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
