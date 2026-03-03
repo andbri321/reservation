@@ -1,11 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  date: 2026-03-03 15:57:34
+  date: 2026-03-03 15:58:35
   user: one
   room: one
 
 two:
-  date: 2026-03-03 15:57:34
+  date: 2026-03-03 15:58:35
   user: two
   room: two
