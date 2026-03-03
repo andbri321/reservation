@@ -1,0 +1,19 @@
+<div id="<%= dom_id reservation_room %>">
+  <p>
+    <strong>Date:</strong>
+    <%= reservation_room.date %>
+  </p>
+
+  <p>
+    <strong>User:</strong>
+    <%#= reservation_room.user_id %>
+    <%= reservation_room.user.name %>
+  </p>
+
+  <p>
+    <strong>Room:</strong>
+    <%#= reservation_room.room_id %>
+    <%= reservation_room.room.name %>
+  </p>
+
+</div>
